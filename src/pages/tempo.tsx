@@ -15,7 +15,7 @@ const Time = () => {
 	const { time } = rout.query
 
 	const timeNow = Date.now() / 1000
-	const timeDif = +time - timeNow
+	const timeDif = +time - timeNow + new Date().getTimezoneOffset() * 60
 
 	const [tempo, setTempo] = useState<Time>()
 
