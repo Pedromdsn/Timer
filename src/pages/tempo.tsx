@@ -7,11 +7,13 @@ const Time = () => {
 	const router = useRouter()
 
 	const { time } = router.query
-	const savedTime = Number(time) * 1000
+	const [savedTime, setSavedTime] = useState(+time * 1000)
 
-	useEffect(() => {
-		// if (!time) router.push("/")
-	}, [])
+
+	// useEffect(() => {
+	// 	setSavedTime(e => +time * 1000)
+	// 	// if (!time) router.push("/")
+	// }, [])
 
 	return (
 		<main className="h-screen" style={{ background: "#222" }}>
