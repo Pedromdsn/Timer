@@ -13,7 +13,7 @@ const Clock = ({ time }: ClockProps) => {
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setTimer((e) => e - 1 || time - new Date().getTime())
+			setTimer((e) => e - 1 || (time - new Date().getTime()) / 1000)
 			console.log(timer)
 		}, 1000)
 		return () => clearInterval(interval)
